@@ -3,16 +3,18 @@
 body {
 	justify-content: center;
 	box-sizing: border-box;
-	background-color: black;
+	
 }
 
 .absolute {
 	position: absolute;
-	top: 50px !important;
 	inset: 0;
 	justify-content: center;
 	display: inline-flex;
 	flex-direction: row;
+	overflow: hidden;
+	background: rgb(19, 19, 19);
+	
 }
 
 .justify-center {
@@ -20,38 +22,39 @@ body {
 }
 
 .shape1-bg {
-	width: 400px;
-	height: 400px;
+	width: 50%;
+	height: 50%;
 	border-radius: 99px;
 	position: relative;
 	animation: one 10s infinite;
-	margin-top: 150px;
+	margin-top: 30vh;
 	
 }
 
 .shape2-bg {
-	width: 350px;
-	height: 350px;
+	width: 40%;
+	height: 40%;
 	border-radius: 99px;
 	position: relative;
 	animation: two 10s infinite;
-	margin-top: 150px;
+	margin-top: 30vh;
 }
 
 @keyframes one{
-	0%{left: 0px; top: 0px;}
-	25%{left: -100px; top: 70px;}
-	50%{left: 20px; top: 150px;}
-	75%{left: 50px; top: 100px;}
-	100%{left: 0px; top: 0px;}
+	0%{left: 0vw; top: 0vh;}
+	25%{left: -5vw; top: 5vh;}
+	50%{left: 5vw; top: 5vh;}
+	50%{left: 5vw; top: 5vh;}
+	75%{left: 5vw; top: 5vh;}
+	100%{left: 0vw; top: 0vh;}
 }
 
 @keyframes two{
-	0%{left: 0px; top: 0px;}
-	25%{left: 50px; top: 10px;}
-	50%{left: 100px; top: 50px;}
-	75%{left: 50px; top: 100px;}
-	100%{left: 0px; top: 0px;}
+	0%{left: 0vw; top: 0vh;}
+	25%{left: 5vw; top: 5vh;}
+	50%{left: 5vw; top: 5vh;}
+	75%{left: 5vw; top: 5vh;}
+	100%{left: 0vw; top: 0vh;}
 }
 
 .opacity-50{
@@ -81,81 +84,241 @@ body {
 .nav-container{
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 	width: 100%;
-}
-
-ul{
-	position: relative;
-	list-style: none;
-	padding-right: 50px;
-}
-
-ul li{
-	position: relative;
-	display: inline-block;
-	margin: 0 10px;
-}
-
-ul li a{
-	display: block;
-	padding: 10px 15px;
-	font-size: 18px;
-	text-decoration: none;
-	font-weight: 500;
-	letter-spacing: 2px;
-	text-transform: uppercase;
+	font-size: 16px;	
 	font-family: 'Source Code Pro', sans-serif;
+	background: transparent;
+	position: relative;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    margin-left: 5vw;
+}
+
+.nav-container h1{
+	font-size: 28px;
+	margin: 0;
 	color: #c7c7c7;
 }
 
-ul li span{
-	position: absolute;
-	background: rgb(15, 255, 255);
-	transition: 0.5s;
-	opacity: 0.5;
+.nav-image {
+	width: 40px;
+	height: auto;
+    margin-left: 30px;
 }
 
-ul li .top-border{
-	width: 10px;
-	height: 2px;
+.menu-toggle,
+.menu-close {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding-right: 10px;
+    width: 70%;
+    margin-right: 15px;
+    margin-top: 25px;
+    background: transparent;
+	position: relative;
 	top: 0;
-	left: 2px;
+	z-index: 1000;
 }
 
-ul li .left-border{
-	width: 2px;
-	height: 10px;
-	top: 0;
-	left: 0;
+.nav-menu li {
+    position: relative;
+    display: inline-block;
+    margin: 0 25px;
 }
 
-ul li .right-border{
-	width: 2px;
-	height: 10px;
-	bottom: 0;
-	right: 0;
+.nav-menu li a {
+    display: block;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #c7c7c7;
 }
 
-ul li .bottom-border{
-	width: 10px;
-	height: 2px;
-	bottom: 0;
-	right: 2px;
+.nav-menu li span {
+    position: absolute;
+    background: rgb(15, 255, 255);
+    transition: 0.5s;
+    opacity: 0.5;
 }
 
-ul li:hover .top-border, ul li:hover .bottom-border{
-	width: 80%;
-	opacity: 0.5;
-	box-shadow: 0 0 10px rgb(15, 255, 255), 0 0 15px rgb(15, 255, 255), 0 0 20px rgb(15, 255, 255)
+.nav-menu li .top-border {
+    width: 10px;
+    height: 2px;
+    top: 0;
+    left: 2px;
 }
 
-ul li:hover .left-border, ul li:hover .right-border{
-	height: 50%;
-	opacity: 0.5;
-	box-shadow: 0 0 10px rgb(15, 255, 255), 0 0 15px rgb(15, 255, 255), 0 0 20px rgb(15, 255, 255)
+.nav-menu li .left-border {
+    width: 2px;
+    height: 10px;
+    top: 0;
+    left: 0;
 }
 
-ul li a:hover{
-	color: #dbdbdb;
+.nav-menu li .right-border {
+    width: 2px;
+    height: 10px;
+    bottom: 0;
+    right: 0;
 }
 
+.nav-menu li .bottom-border {
+    width: 10px;
+    height: 2px;
+    bottom: 0;
+    right: 2px;
+}
+
+.nav-menu li:hover .top-border,
+.nav-menu li:hover .bottom-border {
+    width: 80%;
+    opacity: 0.5;
+    box-shadow: 0 0 10px rgb(15, 255, 255), 0 0 15px rgb(15, 255, 255), 0 0 20px rgb(15, 255, 255);
+}
+
+.nav-menu li:hover .left-border,
+.nav-menu li:hover .right-border {
+    height: 50%;
+    opacity: 0.5;
+    box-shadow: 0 0 10px rgb(15, 255, 255), 0 0 15px rgb(15, 255, 255), 0 0 20px rgb(15, 255, 255);
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+	.shape1-bg {
+		width: 40%;
+		height: 60%;
+		border-radius: 99px;
+		position: relative;
+		animation: one 10s infinite;
+		margin-top: 20vh;
+		
+	}
+
+	.shape2-bg {
+		width: 30%;
+		height: 50%;
+		border-radius: 99px;
+		position: relative;
+		animation: two 10s infinite;
+		margin-top: 20vh;
+	}
+	
+	@keyframes one{
+		0%{left: 0vw; top: 0vh;}
+		25%{left: -10vw; top: 10vh;}
+		50%{left: 10vw; top: 10vh;}
+		50%{left: 10vw; top: 10vh;}
+		75%{left: 10vw; top: 10vh;}
+		100%{left: 0vw; top: 0vh;}
+	}
+
+	@keyframes two{
+		0%{left: 0vw; top: 0vh;}
+		25%{left: 10vw; top: 10vh;}
+		50%{left: 10vw; top: 10vh;}
+		75%{left: 10vw; top: 10vh;}
+		100%{left: 0vw; top: 0vh;}
+	}
+	
+	.nav-container{
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.nav-left {
+		display: relative; 
+		justify-content: center; 
+		width: 100%; 		
+		margin-left: 0; 
+		margin-top: 10px;
+		text-align: center;
+		position: relative;
+	}
+	
+	.nav-container h1{
+		font-size: 22px;
+		margin: 0;
+	}
+	
+	.nav-image {
+		width: 30px;
+		height: auto;
+		margin-left: 10px;
+	}
+	
+	.menu-toggle {
+        display: block;
+    }
+
+    .menu-close {
+        display: none;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background: transparent;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 0;
+        margin: 0;
+		z-index: 1000;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    .menu-close.show {
+        display: block;
+    }
+
+    .nav-menu li {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+	
+}
+
+@media only screen and (min-width: 1001px) {
+	.menu-toggle {
+        display: none;
+    }
+
+    .menu-close {
+        display: none; /* Hide close button on desktop */
+    }
+}
