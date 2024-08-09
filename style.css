@@ -3,82 +3,29 @@
 body {
 	justify-content: center;
 	box-sizing: border-box;
-	
-}
-
-.absolute {
-	position: absolute;
-	inset: 0;
-	justify-content: center;
-	display: inline-flex;
-	flex-direction: row;
 	overflow: hidden;
-	background: rgb(19, 19, 19);
+	margin: 0;
+	padding: 0;
 	
 }
 
-.justify-center {
-	justify-content: center;
+.background-c {
+    background: linear-gradient(45deg, rgb(45, 45, 45), rgb(55, 55, 55), rgb(45, 45, 45));
+    background-size: 200% 200%;
+    animation: bg 30s ease infinite;
+    height: 100vh;
 }
 
-.shape1-bg {
-	width: 50%;
-	height: 50%;
-	border-radius: 99px;
-	position: relative;
-	animation: one 10s infinite;
-	margin-top: 30vh;
-	
-}
-
-.shape2-bg {
-	width: 40%;
-	height: 40%;
-	border-radius: 99px;
-	position: relative;
-	animation: two 10s infinite;
-	margin-top: 30vh;
-}
-
-@keyframes one{
-	0%{left: 0vw; top: 0vh;}
-	25%{left: -5vw; top: 5vh;}
-	50%{left: 5vw; top: 5vh;}
-	50%{left: 5vw; top: 5vh;}
-	75%{left: 5vw; top: 5vh;}
-	100%{left: 0vw; top: 0vh;}
-}
-
-@keyframes two{
-	0%{left: 0vw; top: 0vh;}
-	25%{left: 5vw; top: 5vh;}
-	50%{left: 5vw; top: 5vh;}
-	75%{left: 5vw; top: 5vh;}
-	100%{left: 0vw; top: 0vh;}
-}
-
-.opacity-50{
-	opacity: 0.5;
-}
-
-.blur{
-	filter: blur(90px);
-}
-
-.color1{
-	background-color: rgb(140, 0, 215);
-}
-
-.color2{
-	background-color: rgb(255, 72, 173);
-}
-
-.color3{
-	background-color: rgb(30, 0, 255);
-}
-
-.color4{
-	background-color: rgb(167, 57, 250);
+@keyframes bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .nav-container{
@@ -204,45 +151,10 @@ body {
 
 
 @media only screen and (max-width: 1000px) {
-	.shape1-bg {
-		width: 60%;
-		height: 60%;
-		border-radius: 99px;
-		position: relative;
-		animation: one 10s infinite;
-		margin-top: 20vh;
-		
-	}
-
-	.shape2-bg {
-		width: 50%;
-		height: 50%;
-		border-radius: 99px;
-		position: relative;
-		animation: two 10s infinite;
-		margin-top: 20vh;
-	}
-	
-	@keyframes one{
-		0%{left: 0vw; top: 0vh;}
-		25%{left: -10vw; top: 10vh;}
-		50%{left: 10vw; top: 10vh;}
-		50%{left: 10vw; top: 10vh;}
-		75%{left: 10vw; top: 10vh;}
-		100%{left: 0vw; top: 0vh;}
-	}
-
-	@keyframes two{
-		0%{left: 0vw; top: 0vh;}
-		25%{left: 10vw; top: 10vh;}
-		50%{left: 10vw; top: 10vh;}
-		75%{left: 10vw; top: 10vh;}
-		100%{left: 0vw; top: 0vh;}
-	}
-	
-	.blur {
-	    -webkit-filter: blur(90px);
-	    filter: blur(90px);
+	.background-c {
+		background-size: 300% 300%;
+		animation: bg 20s ease infinite;
+		min-height: 100vh;
 	}
 	
 	.nav-container{
