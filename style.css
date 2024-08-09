@@ -10,10 +10,23 @@ body {
 }
 
 .background-c {
+    background: -webkit-linear-gradient(45deg, rgb(45, 45, 45), rgb(55, 55, 55), rgb(45, 45, 45));
     background: linear-gradient(45deg, rgb(45, 45, 45), rgb(55, 55, 55), rgb(45, 45, 45));
     background-size: 200% 200%;
-    animation: bg 30s ease infinite;
-    height: 100vh;
+    -webkit-animation: bg 10s ease infinite;
+    animation: bg 20s ease infinite;
+}
+
+@-webkit-keyframes bg {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @keyframes bg {
@@ -155,6 +168,17 @@ body {
 		background-size: 300% 300%;
 		animation: bg 20s ease infinite;
 		min-height: 100vh;
+	}
+	@-webkit-keyframes bg {
+	    0% {
+	        background-position: 0% 50%;
+	    }
+	    50% {
+	        background-position: 100% 50%;
+	    }
+	    100% {
+	        background-position: 0% 50%;
+	    }
 	}
 	
 	.nav-container{
