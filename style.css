@@ -207,7 +207,7 @@ body {
 	.shape1-bg {
 		width: 40%;
 		height: 60%;
-		border-radius: 150px;
+		border-radius: 99px;
 		position: relative;
 		animation: one 10s infinite;
 		margin-top: 20vh;
@@ -217,7 +217,7 @@ body {
 	.shape2-bg {
 		width: 30%;
 		height: 50%;
-		border-radius: 150px;
+		border-radius: 99px;
 		position: relative;
 		animation: two 10s infinite;
 		margin-top: 20vh;
@@ -238,6 +238,10 @@ body {
 		50%{left: 10vw; top: 10vh;}
 		75%{left: 10vw; top: 10vh;}
 		100%{left: 0vw; top: 0vh;}
+	}
+
+	.blur{
+		filter: blur(90px);
 	}
 	
 	.nav-container{
