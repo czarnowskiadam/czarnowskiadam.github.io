@@ -240,6 +240,11 @@ body {
 		100%{left: 0vw; top: 0vh;}
 	}
 	
+	.blur {
+	    -webkit-filter: blur(90px);
+	    filter: blur(90px);
+	}
+	
 	.nav-container{
 		display: grid;
 		grid-template-columns: 1fr;
