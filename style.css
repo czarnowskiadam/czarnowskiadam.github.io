@@ -9,12 +9,13 @@ body {
 }
 
 .background-c {
-    background: linear-gradient(45deg, rgb(45, 45, 45), rgb(55, 55, 55), rgb(45, 45, 45));
+    background: linear-gradient(45deg, #242638, #565978, #242638);
     background-size: 200% 200%;
-    animation: bg 30s ease infinite;
+    animation: bg 15s ease infinite;
     height: 100vh;
 	overflow: hidden;
 }
+
 
 @keyframes bg {
     0% {
