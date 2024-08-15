@@ -33,3 +33,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle window resize
     window.addEventListener('resize', updateButtonVisibility);
 });
+
