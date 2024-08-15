@@ -28,6 +28,10 @@ body, html {
 	margin: 0 auto;
 	z-index: 1;
 	position: relative;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none; 
+	-ms-user-select: none;
 }
 
 .nav-container{
@@ -328,6 +332,7 @@ body, html {
 		height: 100vh;
 		align-items: center;
 		min-width: 100vw;
+		min-height: 100vh;
 		margin: 0 auto;
 		z-index: 1;
 		position: relative;
@@ -365,13 +370,13 @@ body, html {
 	}
 	
 	.nav-container h1{
-		font-size: 1.5rem;
+		font-size: 1.8rem;
 		margin: 0;
 	}
 	
 	.nav-image {
-		width: 6vw;
-		height: auto;
+		width: 2.2rem;
+		height: 2.2rem;
 		margin-left: 2vw;
 	}
 		
@@ -465,6 +470,25 @@ body, html {
 		font-size: 1rem;
 	}
 
+	.bottom-frame {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.flip-container {
+		margin-bottom: 3vh;
+	}
+	
+	.flipper {
+		width: 25vw;
+		height: 25vh;
+		min-width: 250px;
+		min-height: 325px;
+	}
+	
+	.back p {
+		font-size: 1rem;
+	}
 	
 }
 
