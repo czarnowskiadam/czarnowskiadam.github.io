@@ -29,6 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         viewToShow.style.visibility = 'visible';
     }
+
+    const currentFile = window.location.pathname;
+    const fileName = currentFile.substring(currentFile.lastIndexOf('/') + 1);
+    console.log(currentFile);
+    console.log(fileName);
     
     homeButton.addEventListener('click', function() {        
         switchView(switchHome);     
