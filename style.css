@@ -215,6 +215,10 @@ body, html {
     box-shadow: 0 0 10px rgb(15, 255, 255), 0 0 15px rgb(15, 255, 255), 0 0 20px rgb(15, 255, 255);
 }
 
+.switch-home {
+	visibility: visible;
+}
+
 .middle-frame {
 	display: flex;
 	flex-direction: row;
@@ -298,7 +302,7 @@ body, html {
 
 .front {
     background-color: rgba(38, 38, 38, 0.8);
-	box-shadow: 10px 10px 20px rgba(49, 49, 49, 0.5);
+	box-shadow: 10px 10px 20px rgba(49, 49, 49, 1);
 	text-align: center;
 }
 
@@ -324,12 +328,26 @@ body, html {
     text-align: center;
 	align-items: center;
     overflow: hidden; 
-	box-shadow: 10px 10px 20px rgba(49, 49, 49, 0.5);
+	box-shadow: 10px 10px 20px rgba(49, 49, 49, 1);
 }
 
 .back p {
     margin-top: 5%;
     font-size: 1rem;
+}
+
+.switch-projects {
+	visibility: hidden;
+}
+
+
+.switch-resume {
+	visibility: hidden;
+}
+
+
+.switch-contact {
+	visibility: hidden;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -373,6 +391,7 @@ body, html {
 		background-color: rgba(38, 38, 38, 0.8);
 		border-radius: 4px;
 		margin-top: 1vh;
+		box-shadow: 6px 6px 11px rgba(49, 49, 49, 1);
 	}
 	
 	.nav-container h1{
