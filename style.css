@@ -270,7 +270,7 @@ body, html {
 .flipper {
     position: relative;
     width: 13vw;
-    height: 35vh;
+    height: 100%;
     transform-style: preserve-3d;
     transition: transform 0.6s ease-out;
     transform-origin: center center;
@@ -289,9 +289,8 @@ body, html {
     backface-visibility: hidden;
     border-radius: 10px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    justify-content: center;    
     top: 0;
     left: 0;
     transform: translateZ(0); 
@@ -300,6 +299,7 @@ body, html {
 .front {
     background-color: rgba(38, 38, 38, 0.8);
 	box-shadow: 10px 10px 20px rgba(49, 49, 49, 0.5);
+	text-align: center;
 }
 
 .image {
@@ -310,6 +310,11 @@ body, html {
 	min-height: 100%;
 }
 
+.front p {	
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
 .back {
     background-color: rgba(38, 38, 38, 0.8);
     color: #d9d9d9;
@@ -317,6 +322,7 @@ body, html {
     padding: 10%;
     box-sizing: border-box;
     text-align: center;
+	align-items: center;
     overflow: hidden; 
 	box-shadow: 10px 10px 20px rgba(49, 49, 49, 0.5);
 }
