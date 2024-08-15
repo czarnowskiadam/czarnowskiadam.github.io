@@ -53,6 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
     languageButton.addEventListener('click', function() {
         const currentFile = window.location.pathname;
         const fileName = currentFile.substring(currentFile.lastIndexOf('/') + 1);
+        console.log(currentFile);
+        console.log(fileName);
         
         if (fileName == 'index.html') {
             window.location.href = 'polish.html';
