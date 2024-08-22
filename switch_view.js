@@ -10,15 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const switchProjects = document.querySelector('.switch-projects');
     const switchContact = document.querySelector('.switch-contact');
 
-
-    function getViewList() {
-        return [
-            switchHome.style.display,
-            switchResume.style.display,
-            switchProjects.style.display,
-            switchContact.style.display
-        ];
-    }
+    let currentView = switchHome;
 
     function switchView(viewToShow) {        
         switchHome.style.display = 'none';
@@ -27,21 +19,22 @@ document.addEventListener('DOMContentLoaded', function() {
         switchContact.style.display = 'none';
         
         viewToShow.style.display = 'block';
+        currentView = viewToShow;
     }
     
     homeButton.addEventListener('click', function() {        
-        switchView(switchHome);     
+        changeViewWithAnimation(switchHome, currentView, switchView);
     });
 
     resumeButton.addEventListener('click', function() {        
-        switchView(switchResume);   
+        changeViewWithAnimation(switchResume, currentView, switchView);  
     });
 
     projectsButton.addEventListener('click', function() {
-        switchView(switchProjects); 
+        changeViewWithAnimation(switchProjects, currentView, switchView);  
     });
 
     contactButton.addEventListener('click', function() {
-        switchView(switchContact);  
+        changeViewWithAnimation(switchContact, currentView, switchView);  
     });
 });
