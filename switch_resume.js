@@ -12,10 +12,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const switchSkills = document.querySelector('.skills');
 	const switchHobbies = document.querySelector('.hobbies');
 	
+	// Get the full path of the current URL
+	var fullPath = window.location.pathname;
+
+	// Extract the file name from the full path
+	var fileName = fullPath.substring(fullPath.lastIndexOf('/') + 1);
+
+	console.log("Current HTML file:", fileName);
+	
 	const resumeTitle = document.querySelector('#resumeTitle')
 	resumeTitle.textContent = 'EDUCATION';
 	
-    // let currentView = switchEducation;
 
     function switchView(viewToShow) {        
         switchEducation.style.display = 'none';
@@ -25,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		switchHobbies.style.display = 'none';
         
         viewToShow.style.display = 'block';
-        // currentView = viewToShow;
     }
     
     educationButton.addEventListener('click', function() {  

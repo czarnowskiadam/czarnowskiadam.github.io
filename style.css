@@ -450,7 +450,6 @@ body, html {
 	color: #d9d9d9;
 }
 
-
 .tile h1 {
 	font-size: 1.3rem;
 }
@@ -464,7 +463,6 @@ body, html {
 	margin-top: auto;
 	padding-bottom: 10px;
 }
-
 
 .switch-resume {
 	display: none;
@@ -537,7 +535,7 @@ body, html {
 .resume-buttons-container a {
 	font-family: 'Source Code Pro', sans-serif;
 	color: #d9d9d9;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -662,7 +660,6 @@ body, html {
 	max-height: 225px;
 }
 
-
 .languages {
 	display: none;
 	position: relative;
@@ -733,20 +730,6 @@ body, html {
 	box-sizing: border-box;
 }
 
-.skills-image {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	padding: 20px;
-}
-
-.skills-image img {
-	max-width: 225px;
-	max-height: 225px;
-	object-fit: contain;
-}
-
 .hobbies {
 	display: none;
 	position: relative;
@@ -797,7 +780,7 @@ body, html {
 .sender-info {
 	display: flex;
 	flex-direction: column;
-	justify-content: center; /* Center items vertically */
+	justify-content: center;
 	align-items: center;
 	width: 30%;
 	margin: 10px;
@@ -805,7 +788,7 @@ body, html {
 }
 
 .sender-info input {
-	max-width: 60%;
+	width: 60%;
 	height: 50px;
 	margin: 20px 20px;
 	padding: 5px 30px;
@@ -816,6 +799,10 @@ body, html {
 	font-size: 1.5rem;	
 	background-color: rgba(26, 26, 33, 0.8);
 	transition: all 0.5s ease;
+}
+
+.sender-info input::placeholder {
+	text-align: center;
 }
 
 .sender-info input:focus {
@@ -847,6 +834,10 @@ body, html {
 	font-size: 1.5rem;	
 	background-color: rgba(26, 26, 33, 0.8);
 	transition: all 0.5s ease;
+}
+
+.sender-msg textarea::placeholder {
+	text-align: center;
 }
 
 .sender-msg textarea:focus {
@@ -881,6 +872,18 @@ body, html {
 	box-shadow: 0 0 8px rgba(15, 255, 255, 0.5);
 }
 
+.links-container {	
+	display: flex;
+	flex-direction: row;
+    background-color: transparent;
+	margin-top: 5%;
+	width: 100%;
+	height: 60px;
+	gap: 15px;
+	justify-content: center;
+}
+
+
 @media only screen and (max-width: 1000px) {
 	.cut {
 		width: 100vw;
@@ -903,7 +906,6 @@ body, html {
 		padding: 0;
 		margin: 0;
 	}
-	
 	
 	.nav-left {
 		display: relative; 		
@@ -1054,7 +1056,7 @@ body, html {
 	}
 
 	.text-container h1 {
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 	}
 
 	.text-container h2 {
@@ -1083,6 +1085,149 @@ body, html {
 	
 	.scroller[data-speed="fast"] {
 		--_animation-duration: 60s;
+	}
+	
+	.switch-resume {
+		margin-top: 4vh;
+		top: 0;
+	}
+	
+	.resume-frame {
+		flex-direction: column;
+	}
+	
+	.resume-img-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.resume-buttons {
+		padding: 10px;	
+	}
+	
+	.resume-right {
+		display: flex;
+		width: 90vw;
+		margin-left: 5vw;
+		margin-right: 5vw;
+		margin-top: 3vh;
+		padding: 0;	
+	}
+	
+	.education-grid {
+		flex-direction: column;
+	}
+	
+	.left-panel {
+		width: 100%;
+	}
+
+	.right-panel {
+		width: 100%;
+	}
+	
+	.info {
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		text-align: center;
+	}
+	
+	.info h1 {
+		font-size: 1.4rem;
+		padding: 0 5vw;
+	}
+
+	.info h2 {
+		font-size: 1rem;
+		padding: 0 5vw;
+	}
+	
+	.education-image img {
+		max-width: calc(50vw);
+		max-height: auto;
+	}
+	
+	.holder {
+		flex-direction: column;
+	}
+	
+	.skills-info {
+		padding: 0;
+		margin: 0;
+		text-align: center;
+	}
+
+	.skills-info h1 {
+		font-size: 1.4rem;
+		padding: 0 5vw;
+	}
+
+	.skills-info h2 {
+		font-size: 1rem;
+		padding: 0 5vw;
+	}
+
+	.skills-left-panel {
+		width: 100%;
+	}
+
+	.skills-right-panel {
+		width: 100%;
+	}
+
+	.skills-left-panel, .skills-right-panel {
+		padding: 0;
+	}
+	
+	.switch-contact {
+		top: 0%;
+		margin-top: 4vh;
+	}
+	
+	.contact-form {
+		flex-direction: column;
+		width: 90vw;
+		min-height: 30vh;
+		margin: 0 5vw;
+		padding: 0;
+	}
+	
+	.sender-info {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.sender-info input {
+		width: 80%;
+		height: 5vh;
+		margin-top: 2vh;
+		margin-bottom: 0;
+		margin-left: 1vw;
+		margin-right: 1vw;
+		padding: 1vh 2vw;
+		font-size: 1rem;	
+	}
+	
+	.sender-msg textarea {
+		width: 80%;
+		height: 25vh;
+		margin-top: 2vh;
+		margin-bottom: 0;
+		margin-left: 1vw;
+		margin-right: 1vw;
+		padding: 1vh 2vw;
+		font-size: 1rem;	
+	}
+	
+	.sender-button {
+		width: 50%;
+		height: 6vh;
+		margin: 2vh 1vw;
+		padding: 1vh 1vw;
+		font-size: 1rem;	
 	}
 }
 
