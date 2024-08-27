@@ -12,17 +12,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const switchSkills = document.querySelector('.skills');
 	const switchHobbies = document.querySelector('.hobbies');
 	
-	// Get the full path of the current URL
 	var fullPath = window.location.pathname;
-
-	// Extract the file name from the full path
 	var fileName = fullPath.substring(fullPath.lastIndexOf('/') + 1);
-
-	console.log("Current HTML file:", fileName);
 	
 	const resumeTitle = document.querySelector('#resumeTitle')
-	resumeTitle.textContent = 'EDUCATION';
 	
+	function changeName(filename, enName, plName) {
+		if (filename === "polish.html") {
+			resumeTitle.textContent = plName;
+		} else {
+			resumeTitle.textContent = enName;	
+		}
+	}
+
+	changeName(fileName, 'EDUCATION', 'EDUKACJA');
 
     function switchView(viewToShow) {        
         switchEducation.style.display = 'none';
@@ -35,27 +38,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     educationButton.addEventListener('click', function() {  
-		resumeTitle.textContent = 'EDUCATION';	
+		changeName(fileName, 'EDUCATION', 'EDUKACJA');	
         switchView(switchEducation);
     });
 
     experienceButton.addEventListener('click', function() {  
-		resumeTitle.textContent = 'EXPERIENCE';      
+		changeName(fileName, 'EXPERIENCE', 'DOŚWIADCZENIE');      
         switchView(switchExperience);
     });
 	
 	languagesButton.addEventListener('click', function() {  
-		resumeTitle.textContent = 'LANGUAGES';	      
+		changeName(fileName, 'LANGUAGES', 'JĘZYKI'); 
         switchView(switchLanguages);
     });
 	
 	skillsButton.addEventListener('click', function() {  
-		resumeTitle.textContent = 'SKILLS';	      
+		changeName(fileName, 'SKILLS', 'UMIEJĘTNOŚCI');      
         switchView(switchSkills);
     });
 	
 	hobbiesButton.addEventListener('click', function() { 
-		resumeTitle.textContent = 'HOBBIES';	       
+		changeName(fileName, 'HOBBIES', 'HOBBY');	       
         switchView(switchHobbies);
     });
 });
